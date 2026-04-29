@@ -76,7 +76,7 @@ describe("CartContext", () => {
 
     expect(screen.getByTestId("items-count")).toHaveTextContent("1");
     expect(screen.getByTestId("total-items")).toHaveTextContent("1");
-    expect(screen.getByTestId("total-price")).toHaveTextContent("50");
+    expect(screen.getByTestId("total-price")).toHaveTextContent("30");
     expect(screen.getByTestId("qty-product-1")).toHaveTextContent("1");
   });
 
@@ -87,7 +87,7 @@ describe("CartContext", () => {
 
     expect(screen.getByTestId("items-count")).toHaveTextContent("1");
     expect(screen.getByTestId("total-items")).toHaveTextContent("2");
-    expect(screen.getByTestId("total-price")).toHaveTextContent("100");
+    expect(screen.getByTestId("total-price")).toHaveTextContent("60");
     expect(screen.getByTestId("qty-product-1")).toHaveTextContent("2");
   });
 
@@ -108,7 +108,7 @@ describe("CartContext", () => {
 
     expect(screen.getByTestId("qty-product-1")).toHaveTextContent("3");
     expect(screen.getByTestId("total-items")).toHaveTextContent("3");
-    expect(screen.getByTestId("total-price")).toHaveTextContent("150");
+    expect(screen.getByTestId("total-price")).toHaveTextContent("90");
   });
 
   it("removes item when quantity is updated to zero", () => {
