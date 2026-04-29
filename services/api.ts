@@ -29,11 +29,11 @@ export async function getProductById(id: number): Promise<Product> {
 export async function getCategories(): Promise<string[]> {
   const response = await fetch(`${API_BASE_URL}/products/categories`, {
     cache: "no-store",
-  });
-
+  })
+  
   if (!response.ok) {
-    throw new Error("Failed to fetch categories");
+    throw new Error("Failed to fetch categories")
   }
 
-  return response.json();
+  return response.json()
 }

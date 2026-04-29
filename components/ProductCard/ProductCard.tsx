@@ -56,6 +56,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             src={product.image}
             alt={product.title}
             fill
+            loading="eager"
             style={{ objectFit: "contain" }}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />

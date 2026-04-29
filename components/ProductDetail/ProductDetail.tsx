@@ -65,6 +65,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             src={product.image}
             alt={product.title}
             fill
+            loading="eager"
             style={{ objectFit: "contain", padding: "24px" }}
             sizes="(max-width: 768px) 100vw, 480px"
             priority

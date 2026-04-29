@@ -1,39 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Teste tecnico - MySide
 
-## Getting Started
+---
 
-First, run the development server:
+## 🔗 Links
+
+| Recurso | URL |
+|---|---|
+| 🌐 Aplicacao em Producao | [DEPLOY DO PROJETO](https://myside-teste.vercel.app/) |
+| 📦 Repositorio GitHub | [REPOSITORIO](https://github.com/imViniciuuss/myside-teste) |
+
+---
+
+## ✨ Funcionalidades
+
+- Catalogo de produtos consumindo a Fake Store API
+- Busca por nome e descricao dos produtos
+- Filtro por categoria
+- Paginacao de produtos
+- Pagina de detalhe do produto
+- Carrinho global com contexto React:
+  - adicionar item
+  - remover item
+  - atualizar quantidade
+  - limpar carrinho
+- Sidebar do carrinho com total de itens e valor total
+- Estados de loading com skeletons na home e no detalhe
+- Testes unitarios para componentes principais e contexto de carrinho
+
+---
+
+## 🛠️ Stack Tecnologica
+
+| Camada | Tecnologia |
+|---|---|
+| **Frontend** | Next.js 16 + React 19 + TypeScript |
+| **Estilizacao** | styled-components |
+| **Icones** | lucide-react |
+| **Dados** | Fake Store API |
+| **Testes** | Jest + Testing Library |
+| **Deploy** | Vercel |
+
+---
+
+## ⚙️ Como Rodar Localmente
+
+### Pre-requisitos
+
+- Node.js >= 18
+- npm (ou yarn/pnpm/bun)
+
+### 1. Clone o repositorio
+
+```bash
+git clone https://github.com/imViniciuuss/myside-teste.git
+cd myside-teste
+```
+
+### 2. Instale as dependencias
+
+```bash
+npm install
+```
+
+### 3. Rode o projeto em desenvolvimento
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse em: `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧪 Scripts Disponiveis
 
-## Learn More
+```bash
+npm run dev        # ambiente de desenvolvimento
+npm run build      # build de producao
+npm run start      # sobe build de producao
+npm run lint       # analise estaticamente o codigo
+npm run test       # executa testes unitarios
+npm run test:watch # executa testes em modo watch
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧱 Estrutura de Pastas
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+app/          # rotas e paginas (App Router)
+components/   # componentes reutilizaveis e de tela
+context/      # contexto global do carrinho
+hooks/        # hooks customizados
+services/     # camada de integracao com API externa
+types/        # tipagens do dominio
+__tests__/    # testes unitarios
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔒 Observacoes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Este projeto nao exige variaveis de ambiente para rodar localmente, pois usa API publica (`https://fakestoreapi.com`).
+- Para ambiente real, recomendam-se:
+  - API propria (backend) para controle de dados e seguranca
+  - tratamento de erros mais granular por endpoint
+  - monitoramento e rate limiting no servidor
 
-# teste-myside
-7a503af4490b8a6b3f2cec9534c88b1a3a60219b
+---
+
+## ✅ Entrega
+
+- Repositorio Git: codigo-fonte disponivel no GitHub
+- README com instrucoes claras para instalacao e execucao local
