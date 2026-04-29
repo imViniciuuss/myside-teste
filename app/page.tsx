@@ -1,6 +1,8 @@
 import { getProducts, getCategories } from "@/services/api";
 import ProductList from "@/components/ProductList/ProductList";
 
+export const dynamic = "force-dynamic";
+
 export default async function HomePage() {
   const [products, categories] = await Promise.all([
     getProducts().catch((error) => {

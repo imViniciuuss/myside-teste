@@ -4,7 +4,7 @@ const API_BASE_URL = "https://fakestoreapi.com";
 
 export async function getProducts(): Promise<Product[]> {
   const response = await fetch(`${API_BASE_URL}/products`, {
-    cache: "force-cache",
+    cache: "no-store",
   });
 
   if (!response.ok) {
@@ -16,7 +16,7 @@ export async function getProducts(): Promise<Product[]> {
 
 export async function getProductById(id: number): Promise<Product> {
   const response = await fetch(`${API_BASE_URL}/products/${id}`, {
-    cache: "force-cache",
+    cache: "no-store",
   });
 
   if (!response.ok) {
@@ -28,7 +28,7 @@ export async function getProductById(id: number): Promise<Product> {
 
 export async function getCategories(): Promise<string[]> {
   const response = await fetch(`${API_BASE_URL}/products/categories`, {
-    cache: "force-cache",
+    cache: "no-store",
   });
 
   if (!response.ok) {
