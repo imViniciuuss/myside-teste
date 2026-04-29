@@ -6,11 +6,16 @@ interface ProductPageProps {
 }
 
 export async function generateStaticParams() {
-  const products = await getProducts();
+  try {
+    const products = await getProducts();
 
-  return products.map((product) => ({
-    id: String(product.id),
-  }));
+    return products.map((product) => ({
+      id: String(product.id),
+    }));
+  } catch (error) {
+    console.error("Failed to generate static params for products:", error);
+    return [];
+  }
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
