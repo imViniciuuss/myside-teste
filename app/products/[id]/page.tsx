@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import { getProducts, getProductById } from "@/services/api";
 import ProductDetail from "@/components/ProductDetail/ProductDetail";
 
@@ -20,7 +21,12 @@ export async function generateStaticParams() {
 
 export default async function ProductPage({ params }: ProductPageProps) {
   const { id } = await params;
-  const product = await getProductById(Number(id));
 
-  return <ProductDetail product={product} />;
+  try {
+    const product = await getProductById(Number(id));
+    return <ProductDetail product={product} />;
+  } catch (error) {
+    console.error(`Failed to fetch product ${id}:`, error);
+    notFound();
+  }
 }
