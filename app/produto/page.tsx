@@ -4,16 +4,14 @@ import { use } from "react";
 
 export default async function ProdutoPage() {
  const res = await fetch('https://fakestoreapi.com/products')
- .then(response => response.json());
-
-
+ const data = await res.json()
  
- console.log(res);
+ console.log(data);
 
     return (
         <div>
             <h1>Produto</h1>
-            {res?.map((product: any) => (
+            {data?.map((product: any) => (
                 <div key={product.id}>
                     <h2>{product.title}</h2>
                     <p>{product.description}</p>
