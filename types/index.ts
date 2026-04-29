@@ -13,6 +13,27 @@ export interface Product {
   rating: ProductRating;
 }
 
+export interface ProductReview {
+  rating: number;
+}
+
+export interface ProductPayload {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  thumbnail?: string;
+  images?: string[];
+  rating: number;
+  stock?: number;
+  reviews?: ProductReview[];
+}
+
+export interface ProductsPayload {
+  products: ProductPayload[];
+}
+
 export interface CartItem {
   product: Product;
   quantity: number;
