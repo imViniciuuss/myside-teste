@@ -23,7 +23,7 @@ interface ProductListProps {
   categories: string[];
 }
 
-const ITEMS_PER_PAGE = 6;
+const ITEMS_PER_PAGE = 12;
 
 function buildCategoryOptions(categories: string[]) {
   return [
