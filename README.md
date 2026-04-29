@@ -99,14 +99,9 @@ __tests__/    # testes unitarios
 
 ---
 
-## 🔒 Observacoes
+## 🔒 Observação
 
-- Este projeto nao exige variaveis de ambiente para rodar localmente, pois usa a API publica DummyJSON (`https://dummyjson.com`).
-- A Fake Store API (`https://fakestoreapi.com`) foi trocada porque, no deploy na Vercel (e em hosts serverless semelhantes), as requisicoes feitas pelo servidor para essa API falhavam com frequencia (timeout, bloqueio por IP ou instabilidade), deixando o catalogo vazio em producao. A DummyJSON responde de forma estavel nesses ambientes.
-- Para ambiente real, recomendam-se:
-  - API propria (backend) para controle de dados e seguranca
-  - tratamento de erros mais granular por endpoint
-  - monitoramento e rate limiting no servidor
+- Eu troquei a api de produtos para utilizar a api DummyJSON (`https://dummyjson.com/`). A Fake Store API (`https://fakestoreapi.com`) foi trocada porque, no deploy na Vercel (e em hosts serverless semelhantes), as requisicoes feitas pelo servidor para essa API falhavam com frequencia (timeout, bloqueio por IP ou instabilidade), deixando o catalogo vazio em producao. É possível que outros desenvolvedores tenham tido o mesmo problema. A DummyJSON responde de forma estavel nesses ambientes, logo, optei por utiliza-lá e acabei mapeando os mesmos campos dos produtos que tinham na FakeStore para o DummyJSON.
 
 ---
 
