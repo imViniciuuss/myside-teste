@@ -3,7 +3,7 @@ import { use } from "react";
 
 
 export default async function ProdutoPage() {
- const res = await fetch("https://dummyjson.com/products")
+ const res = await fetch("https://fakestoreapi.com/products")
 
  const data = await res.json()
 
@@ -14,7 +14,7 @@ export default async function ProdutoPage() {
     return (
         <div>
             <h1>Produto</h1>
-            {data.products.map((product: any) => (
+            {data.map((product: any) => (
                 <div key={product.id}>
                     <h2>{product.title}</h2>
                     <p>{product.description}</p>
