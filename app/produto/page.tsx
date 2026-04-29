@@ -1,8 +1,11 @@
 import { getProducts } from "@/services/api";
+import { use } from "react";
 
 
-export default async function ProdutoPage() {
- const products = await getProducts();
+export default function ProdutoPage() {
+ const products = use(getProducts());
+
+ console.log(products);
 
     return (
         <div>
