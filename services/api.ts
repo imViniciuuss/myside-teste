@@ -9,11 +9,9 @@ export async function getProducts(): Promise<Product[]> {
     cache: "no-store",
   });
 
-  if (!response.ok) {
-    throw new Error("Failed to fetch products");
-  }
+  const data = await response.json();
 
-  return response.json();
+  return data;
 }
 
 export async function getProductById(id: number): Promise<Product> {
@@ -21,21 +19,16 @@ export async function getProductById(id: number): Promise<Product> {
     cache: "no-store",
   });
 
-  if (!response.ok) {
-    throw new Error("Failed to fetch product");
-  }
+  const data = await response.json();
 
-  return response.json();
+  return data;
 }
 
 export async function getCategories(): Promise<string[]> {
   const response = await fetch(`${BASE_URL}/api/categories`, {
     cache: "no-store",
   });
-  
-  if (!response.ok) {
-    throw new Error("Failed to fetch categories");
-  }
 
-  return response.json();
+  const data = await response.json();
+  return data;
 }
