@@ -13,7 +13,7 @@
 
 ## ✨ Funcionalidades
 
-- Catalogo de produtos consumindo a Fake Store API
+- Catalogo de produtos consumindo a DummyJSON API
 - Busca por nome e descricao dos produtos
 - Filtro por categoria
 - Paginacao de produtos
@@ -36,7 +36,7 @@
 | **Frontend** | Next.js 16 + React 19 + TypeScript |
 | **Estilizacao** | styled-components |
 | **Icones** | lucide-react |
-| **Dados** | Fake Store API |
+| **Dados** | DummyJSON API (`https://dummyjson.com`) |
 | **Testes** | Jest + Testing Library |
 | **Deploy** | Vercel |
 
@@ -101,7 +101,8 @@ __tests__/    # testes unitarios
 
 ## 🔒 Observacoes
 
-- Este projeto nao exige variaveis de ambiente para rodar localmente, pois usa API publica (`https://fakestoreapi.com`).
+- Este projeto nao exige variaveis de ambiente para rodar localmente, pois usa a API publica DummyJSON (`https://dummyjson.com`).
+- A Fake Store API (`https://fakestoreapi.com`) foi trocada porque, no deploy na Vercel (e em hosts serverless semelhantes), as requisicoes feitas pelo servidor para essa API falhavam com frequencia (timeout, bloqueio por IP ou instabilidade), deixando o catalogo vazio em producao. A DummyJSON responde de forma estavel nesses ambientes.
 - Para ambiente real, recomendam-se:
   - API propria (backend) para controle de dados e seguranca
   - tratamento de erros mais granular por endpoint
